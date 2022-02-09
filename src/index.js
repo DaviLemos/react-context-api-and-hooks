@@ -1,13 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 // * Components
-import Home from './templates/Home';
+import Home from "./templates/Home";
 // * Css
-import './styles/global-styles.css';
+import "./styles/global-styles.css";
+import { CounterContextProvider } from "./contexts/CounterContext";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Home />
+    <CounterContextProvider>
+      <Home />
+    </CounterContextProvider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
